@@ -3,7 +3,7 @@ using namespace std;
 
 int cube( int num)
 {
-    int result = num ^3 ;
+    int result = num * num * num;
     return result;
 }
 int main()
