@@ -5,12 +5,27 @@ int main()
 {
     int num = 5;
     int guess;
-
+    int guesscount = 0;
+    int guesslimit = 3;
+    
     do{
-        cout<<"enter you number between 0-10 : "<< endl;
+        if(guesscount<guesslimit){
+        cout<<"enter you number between 0-10 : "<<endl;
         cin >> guess;
-    }
+        guesscount++;
+        }else{
+            cout<<"out of guesses"<< endl;
+            break;
+    }}
     while(guess != num);
-    cout<<"your guess was right"<< endl;
+    
+    if(guess == num){
+            cout<<"your guess was right"<< endl;
+            cout<<"chance taken: "<<guesscount<<"/3"<<endl;
+        }else{
+
+        }
+        
+    
     return 0;
 }
