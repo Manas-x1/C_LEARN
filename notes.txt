@@ -1,0 +1,252 @@
+these are basically the complete notes of the c++ basics
+(from a POV of a guy who knows coding)
+
+1.Basic funtion (printing , importing)
+    C++ uses functions to perform tasks;
+    for example,
+        to import a library,C++ uses the #include funtion;
+
+            for example,
+                #include <iostream>
+                will import the iostream library
+                /*this is a library that contains the cout function*/
+
+        C++ uses cout (consol out) to print to the console;
+            for example,
+                cout << "Hello World" << endl;
+                will print "Hello World" to the console
+
+        C++ uses cin (consol in) to get input from the console;
+            for example,
+                int x;
+                cin >> x;
+                will create a variable called x and set it to the input from the console
+        
+        C++ uses endl (end line) to end a line;
+            for example,
+                cout << "Hello Earth" << endl;
+                cout << "Hello Mars" << endl;
+                will print "Hello Earth" and "Hello Mars" to the console in different lines
+
+
+
+2.Variables 
+    C++ uses variables to store data;
+        for example,
+            int x = 5;
+            will create a variable called x and set it to 5;
+
+3.Datatypes
+    C++ uses datatypes to define the type of data a variable can hold;
+        for example,
+            int x = 5; // integer
+            float y = 5.5; // float
+            double z = 5.501232341233; // double (more precise float)
+            char z = 'a'; // character
+            bool w = true; // boolean
+            string s = "hello"; // string
+
+        /*NOTE:
+        C++ uses a lot of different datatypes,
+        but these are the most common ones
+        and the ones you will use the most
+        (unless you are doing something very specific)*/
+
+
+
+4.Working with strings
+    C++ uses strings to store text;
+        for example,
+            string s = "hello";
+            will create a variable called s and set it to "hello";
+    
+
+5.Working with numbers
+    C++ has a lot of different functions to work with numbers;
+        for example,
+            int x = 5;
+            int y = 10;
+            int z = x + y; //Addition
+            int z = x - y; //Subtraction
+            int z = x * y; //Multiplication
+            int z = x / y; //Division
+            int z = x % y; //Modulus (remainder)
+
+        //incrementing and decrementing
+            x++; //Increment
+            x--; //Decrement
+        //incrementing and decrementing by a certain amount
+            x += 5; //Increment by 5
+            x -= 5; //Decrement by 5
+            x *= 5; //Multiply by 5
+            x /= 5; //Divide by 5
+            x %= 5; //Modulus by 5
+
+    //CMath functions
+        to use thes funtions you need to import the cmath library by,
+    #include <cmath>,
+
+        then you can use the following functions:
+            pow(x, y); //x to the power of y
+            sqrt(x); //square root of x
+            abs(x); //absolute value of x
+            ceil(x); //round up
+            floor(x); //round down
+            round(x); //round to the
+            sin(x); //sine of x
+            cos(x); //cosine of x
+            tan(x); //tangent of x
+        etc...
+
+
+
+//CODE (basic calc/fillups)
+
+6.Arrays
+    C++ uses arrays to store multiple values in a single variable;
+        for example,
+            int x[5] = {1, 2, 3, 4, 5};
+            will create an array called x with 5 elements;
+    
+    C++ can also create 2D arrays 
+        for example,
+            int x[2][3] = {{1, 2, 3}, {4, 5, 6}};
+            will create a 2D array called x with 2 rows and 3 columns;
+
+    C++ can also create 3D arrays
+        for example,
+            int x[2][3][4] = {{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}, {{13, 14, 15, 16}, {17, 18, 19, 20}, {21, 22, 23, 24}}};
+            will create a 3D array called x with 2 rows, 3 columns, and 4 layers;
+    
+    /*Note that the number of elements in an array must be specified when the array is created;*/
+    
+7.Funtions
+    C++ uses funtions to perform tasks;
+        for example,
+            int main(){
+                cout << "Hello World" << endl; //will print "Hello World" to the console
+            }
+    
+/*NOTE: the main function is the entry point of the program,thus it must be declared first,
+        and it will always run first*/
+    
+    C++ also allows you to create your own funtions;
+        for example,
+            dtype NAME(arguments){
+                parameters
+                return value;
+            }
+    here, dtype is the datatype of the return value,
+        NAME is the name of the funtion,
+        arguments are the parameters that are passed to the funtion,
+        parameters are the code that is executed when the funtion is called,
+        and return value is the value that is returned when the funtion is called;
+
+    To call a funtion, you simply use the name of the funtion and pass the arguments;
+        for example,
+            int main(){
+                NAME(arguments);
+            }
+        will call the funtion NAME with the arguments;
+
+8.Return statements
+    C++ uses return statements to return a value from a funtion;
+        for example,
+            dtype NAME{
+                return value; // will return the value to the funtion that called it
+            }        
+
+9.If/else/else-if statements
+    C++ uses if/else/else-if statements to perform decision making simply by using boolean values;
+        for example,
+            if(condition){
+                //code to be executed if condition is true
+            }else if(condition){
+                //if the first condition is false, this will be executed if the condition is true
+            }else{
+                //if all the conditions are false, this will be executed
+            }
+
+//Note: the if statement is a boolean statement, so it will only execute if the condition is true;
+
+//CODE (better calculator)
+
+10.Switch statements
+    ;
+
+12.Loops
+    C++ uses loops to perform tasks repeatedly;
+        there are 4 types of loops in C++:
+
+a.While loops
+    this is a loop that will run as long as a condition is true;
+        for example,
+            while(condition){
+                //code to be executed
+            }
+    //NOTE: the condition is checked before the loop is executed,
+    and if the condition is false, the loop will not be executed otherwise it will continue to run until the condition is false;
+
+b.Do-While loops
+    this is a loop that is same as a while loop, but the condition is checked after the loop is executed;
+        for example,
+        do{
+            //code to be executed
+        }while(condition);
+    //NOTE: the condition is checked after the loop is executed,
+    and if the condition is false, the loop will not be executed otherwise it will continue to run until the condition is false;
+
+//CODE (Guessing game)
+
+c.for loops
+    this is a loop that will run a certain number of times;
+    for example,
+    for(int i = 0; i < 10; i++){
+        //code to be executed
+    }
+//NOTE: the loop will run 10 times, and the variable i will be incremented by 1 each time;
+
+//structure:
+    for(initialization; condition; increment){
+        //code to be executed
+    }
+    where,
+        Initialization is the initial value of the variable,
+        Condition is the condition that the variable must meet to continue the loop,
+        Increment is the value that the variable will be incremented by each time the loop is executed;
+    
+
+//CODE(exponent funtion)
+
+d.Nested loops
+    this is a loop that will run a certain number of times, and each time it will run another loop;
+    for example,
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            //code to be executed
+            }
+    }
+    //NOTE: the loop will run 10 times, and the variable i will be incremented by 1 each time,
+            and the variable j will be incremented by 1 each time the loop is executed;
+
+13.Pointer
+    C++ uses pointers to store the address of a variable;
+        for example,
+            int age = 5;
+            cout << &age << endl; //will print the address of the variable age
+            //NOTE: the address of a variable is the location of the variable in memory;
+
+            int *pAge = &age; //will create a pointer called pAge and set it to the address of the variable age
+            cout << pAge << endl; //will print the address of the variable age
+
+            //dereferencing a pointer
+            cout << *pAge << endl; //will print the value of the variable age
+            //NOTE: the * is used to dereference a pointer,
+            //and it will print the value of the variable that the pointer is pointing to;
+
+14. Classes/Objects
+    C++ uses classes to create objects;
+    for example,
+    
+
+
