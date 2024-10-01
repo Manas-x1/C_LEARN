@@ -246,7 +246,119 @@ d.Nested loops
 
 14. Classes/Objects
     C++ uses classes to create objects;
-    for example,
+        for example,
+        class Name{ //this will create a class called Name, which will contain several attributes;
+            keyword;
+            >> dtype attributes;
+            string strattribute;
+            int intattribute;
+        }
+        //NOTE: the keyword is the type of attributes such as public, private, protected, etc.
+        //and the attributes are the variables that the object will have with their respective dtypes;
+        //and the class can be called in main and can have multiple instances of the class;
     
+    to call an object in main, you simply use the name of the object and pass the arguments;
+        for example,
+        int main(){
+            Name object;
+            object.strattribute = "string";
+            object.intattribute = int;
+            //NOTE: the object is the instance of the class;
+            //and the attributes are the variables that the object will have with their respective dtypes;
+
+        return 0;
+        }
+    Classes can also have funtions;
+        for example,
+            class Name{ 
+            keyword;
+            >> dtype attributes; <<
+            string strattribute;
+            int intattribute;
+
+            void funtion(){
+                //code to be executed
+                }
+        } //NOTE: the funtion can be called in main and can have multiple uses;
+
+        using the funtion we can call the object in main and pass the arguments and the funtion will be executed;
+            for example,
+                class Name{ 
+                keyword;
+                >> dtype attributes; <<
+                string strattribute;
+                int intattribute;
+       
+// this will create a class called Name, which will contain string and integer attributes;
+
+                void Name(string str, int integer){
+                    strattribute = str;
+                    intattribute = integer;
+                    conv<<strattribute<<endl;
+                    conv<<intattribute<<endl;
+
+//this will create a funtion called Name, which will pass the str and integer attributes to the object;
+                }
+            }
+int main(){
+    Name object("string", 5);
+    //NOTE: the object is the instance of the class which will pass the str and integer attributes to the object;
+    //and the attributes are the variables that the object will have with their respective dtypes;
+    //and it'll print the attributes to the console from the funtion;
+    return 0;
+}
+
+15. setters and getters
+    C++ uses setters and getters to access the attributes of an object;
+    for example,
+    class Name{
+        keyword;
+        >> dtype attributes; <<
+        string strattribute;
+        int intattribute;
+        void setStrattribute(string str){
+            strattribute = str;
+            string getStrattribute(){
+                return strattribute;
+                }
+                //NOTE: the setters and getters are used to access the attributes of an object;
+                tters and getters are
+                //and the attributes are the variables that the object will have with their respective dtypes;
+                }
+    }
+
+16. Inheritance
+    C++ uses inheritance to create a new class and inherit the attributes of an existing class;
+    for example,
+    class Person{
+        public;
+        string name;
+        int age;
+        int phone;
+        
+        void person(string n, int a, int p){
+            name = n;
+            age = a;
+            phone = p;
+        }
+    };
+    class Student : public Person{ //this will create a class called Student, which will inherit the attributes of the class Person;
+        public;
+        string school;
+        int grade;
+        int phone;
+        void student(string s, int g ){
+            school = s;
+            grade = g;
+            phone = p;
+            };
+            
+            //NOTE; the class Student will inherit the attributes of the class Person;
+            //and the attributes are the variables that the object will have with their respective dtypes;
+            //we can also override the attributes of the class Person; like in the above code,
+            //we can override the phone attribute of the class Person; and create a new attribute called phone;
+    }
+
+//this just about sums it out for now, as the course will continue. i'll eventually add more notes as i go along.
 
 
