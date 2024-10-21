@@ -1,4 +1,5 @@
 #include <iostream>
+#include<vector>
 using namespace std;
 
 //defing the class "student"
@@ -17,6 +18,7 @@ class student{
 
     //constructor
     public:
+
     void setattributes(int rnum, string nam, int ag, string add, string ph, string em, string cou, string br, string gr)
     {
         
@@ -49,11 +51,9 @@ class student{
 
 int main()
 {
+    
+    //creating the object
     student cl;{
-    cl.setattributes(1, "John", 20, "123 Main St", "555-1234", "john@gmail.com", "Computer Science", "Computer Science", "A");
-    cl.setattributes(2, "Jane", 21, "456 Elm St", "555-5678", "jane@gmail.com", "Computer Science", "Computer Science", "B");
-    cl.setattributes(3, "Bob", 22, "789 Oak St", "555-9012", "bob@gmail.com", "Computer Science", "Computer Science", "C");
-    cl.setattributes(4, "Alice", 23, "321 Pine St", "555-3456", "alice@gmail.com", "Computer Science", "Computer Science", "A");
     }
     //inputing the values
         int rnum = 1;
@@ -65,6 +65,8 @@ int main()
         string cou;
         string br;
         string gr;
+
+        char choice;
 
         //inputing the values
         while (true)
@@ -85,6 +87,7 @@ int main()
         cin >> cou;
         cout << "Enter branch: ";
         cin >> br;
+        cin.ignore();
         cout << "Enter grade: ";
         cin >> gr;
         //adding the info to the object
@@ -92,6 +95,14 @@ int main()
         //displaying the info
         cl.display();
 
+        cout << "Do you want to enter more data? (y/n): ";
+        cin >> choice;
+        if (choice == 'n')
+        {
+            break;
+        }else{
+            continue;
+        }
         }
 
     return 0;
